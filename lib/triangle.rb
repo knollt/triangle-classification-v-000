@@ -49,5 +49,11 @@ class TriangleError
     @tri << c
   end
 
-    
+  def valid?
+
+    sum_a_b = @tri[0] + @tri[1]
+    sum_b_c = @tri[1] + @tri[2]
+    sum_a_c = @tri[0] + @tri[2]
+
+    if 
 end
