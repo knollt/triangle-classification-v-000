@@ -40,7 +40,7 @@
 #
 # end
 
-class TriangleError
+class Triangle
 
   attr_reader :a, :b, :c
 
