@@ -43,17 +43,18 @@
 class TriangleError
 
   def initialize (a, b, c)
-    @tri = []
-    @tri << a
-    @tri << b
-    @tri << c
+    @a = a 
+    @b = b 
+    @c = c
   end
 
-  def valid?
+  def valid_triangle
+    real_tri = [(a + b > c), (a + c > c), (b + c > b)]
+    [a, b, c].each {|side| real_tri << false if side <= 0}
+    raise TriangleError if real_tri.include?(false)
+  end
 
-    sum_a_b = @tri[0] + @tri[1]
-    sum_b_c = @tri[1] + @tri[2]
-    sum_a_c = @tri[0] + @tri[2]
-
-    if 
+  def kind
+    valid_triangle
+      
 end
