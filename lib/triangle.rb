@@ -56,5 +56,5 @@ class TriangleError
 
   def kind
     valid_triangle
-      
+  end    
 end
