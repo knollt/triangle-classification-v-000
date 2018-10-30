@@ -39,3 +39,15 @@
 # class TriangleError < StandardError
 #
 # end
+
+class TriangleError
+
+  def initialize (a, b, c)
+    @tri = []
+    @tri << a 
+    @tri << b 
+    @tri << c 
+  end 
+
+    
+end  
