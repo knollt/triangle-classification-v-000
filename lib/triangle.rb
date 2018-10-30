@@ -1,17 +1,17 @@
 # class Triangle
-# 
+#
 #   def initialize (side_1, side_2, side_3)
 #     @tri_sides = []
 #     @tri_sides << side_1
 #     @tri_sides << side_2
 #     @tri_sides << side_3
 #   end
-# 
+#
 #   def valid?
 #     sum_1_2 = @tri_sides[0] + @tri_sides[1]
 #     sum_1_3 = @tri_sides[0] + @tri_sides[2]
 #     sum_2_3 = @tri_sides[1] + @tri_sides[2]
-# 
+#
 #     if (@tri_sides.none? {|side| side <= 0}) &&
 #       (sum_1_2 > @tri_sides[2] && sum_1_3 > @tri_sides[1] && sum_2_3 > @tri_sides[0])
 #       true
@@ -19,7 +19,7 @@
 #       false
 #     end
 #   end
-# 
+#
 #   def kind
 #     if valid?
 #       if @tri_sides.uniq.length == 1
@@ -34,8 +34,8 @@
 #     end
 #   end
 # end
-# 
-# 
+#
+#
 # class TriangleError < StandardError
-# 
+#
 # end
