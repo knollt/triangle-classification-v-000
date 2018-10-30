@@ -56,5 +56,12 @@ class TriangleError
 
   def kind
     valid_triangle
-  end    
+    if a == b && b == c
+      :equilateral
+    elsif a == b || b == c || a == c
+      :isosceles
+    else
+      :scalene
+    end       
+  end
 end
