@@ -50,12 +50,6 @@ class TriangleError
     @c = c
   end
 
-  def valid_triangle
-    real_tri = [(a + b > c), (a + c > c), (b + c > b)]
-    [a, b, c].each {|side| real_tri << false if side <= 0}
-    raise TriangleError if real_tri.include?(false)
-  end
-
   def kind
     valid_triangle
     if a == b && b == c
@@ -66,6 +60,14 @@ class TriangleError
       :scalene
     end
   end
+
+  def valid_triangle
+    real_tri = [(a + b > c), (a + c > c), (b + c > b)]
+    [a, b, c].each {|side| real_tri << false if side <= 0}
+    raise TriangleError if real_tri.include?(false)
+  end
+
+
 
   class TriangleError < StandardError
   end
